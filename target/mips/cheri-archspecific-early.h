@@ -103,7 +103,7 @@ static inline const cap_register_t *cheri_get_ddc(CPUMIPSState *env) {
     return &env->active_tc.CHWR.DDC;
 }
 
-static inline const cap_register_t *_cheri_get_pcc_unchecked(CPUMIPSState *env)
+static inline const cap_register_t *_cheri_get_pcc_unchecked(const CPUMIPSState *env)
 {
     cheri_debug_assert(env->active_tc.PCC.cr_extra == CREG_FULLY_DECOMPRESSED);
     return &env->active_tc.PCC;

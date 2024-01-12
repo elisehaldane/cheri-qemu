@@ -1504,7 +1504,7 @@ static inline target_ulong cpu_get_recent_pc(CPUMIPSState *env)
 #endif
 }
 
-static inline bool pc_is_current(CPUArchState *env)
+static inline bool pc_is_current(const CPUArchState *env)
 {
 #ifdef CONFIG_DEBUG_TCG
     return env->active_tc._pc_is_current;
